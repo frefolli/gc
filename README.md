@@ -1,6 +1,6 @@
 # Garbage Collection by Wrapping Pointers
 
-The header file "gc.hpp" defines a class `Box<T>` that wraps and handles (auto-destructing the pointer if now moved) a pointer of a generic `T` typename.
+The header file "gc.hpp" defines a class `Box<T>` that wraps and handles (auto-destructing the pointer if not moved and equal not nullptr) a pointer of a generic `T` typename.
 
 The class `Box<T>` implements copy constructor, move constructor, smart dereference and throws an `std::runtime_error` if a dereference against a `nullptr` occurs. Segfault is no more!
 
